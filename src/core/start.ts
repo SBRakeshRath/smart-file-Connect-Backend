@@ -36,14 +36,14 @@ subClient.on("success", (err) => {
   console.log(err);
 });
 
-await Promise.all([pubClient.connect(), subClient.connect()]);
+// await Promise.all([pubClient.connect(), subClient.connect()]);
 
 const io = new Server(httpServer, {
   cors: {
     origin: "*",
   },
 
-  adapter: createAdapter(pubClient, subClient),
+  // adapter: createAdapter(pubClient, subClient),
 });
 
 
