@@ -89,6 +89,8 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(process.env.PORT || 3000, () => {
-  console.log("listening on *:3000");
+console.log("port", process.env.PORT);
+
+httpServer.listen(process.env.PORT || 8080, () => {
+  console.log("listening on", process.env.PORT || 8080);
 });
